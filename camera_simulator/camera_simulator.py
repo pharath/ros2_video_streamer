@@ -36,8 +36,8 @@ class CameraSimulator(Node):
     def __init__(self, **kwargs):
         super().__init__("camera_simulator")
 
-        image_topic_ = self.declare_parameter("image_topic", "/image/image_raw").value
-        camera_info_topic_ = self.declare_parameter("camera_info_topic", "/image/camera_info").value
+        image_topic_ = self.declare_parameter("image_topic", "/camera/color/image_raw").value
+        camera_info_topic_ = self.declare_parameter("camera_info_topic", "/camera/color/camera_info").value
 
         self.frame_id_ = self.declare_parameter("frame_id", "camera").value
         self.camera_name_ = self.declare_parameter("camera_name", "narrow_stereo").value
